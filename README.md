@@ -25,7 +25,7 @@
 ### Langkah-langkah
 
 1. Kunjungi website:
-   <a href="https://hyura-deck.vercel.app/" target="_blank">https://hyura-deck.vercel.app/</a>
+   <a href="https://hyura-deck.vercel.app/" target="_blank" >HyuraDeck</a>
    
 
 2. Nikmati permainan HyuraDeck langsung di browser Anda.
