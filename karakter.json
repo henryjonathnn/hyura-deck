@@ -402,6 +402,19 @@
           "def": 110,
           "spd": 80
         }
+      },
+      {
+        "id": 32,
+        "name": "Agus Ketapel",
+        "image": "img/agus-ketapel.jpg",
+        "rarity": "rare",
+        "classes": ["WEAPON", "SLINGSHOT"],
+        "stats": {
+          "hp": 50,
+          "atk": 180,
+          "def": 50,
+          "spd": 150
+        }
       }
     ],
     "rarityConfig": {
