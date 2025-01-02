@@ -233,6 +233,19 @@
           "def": 180,
           "spd": 130
         }
+      },
+      {
+        "id": 19,
+        "name": "El Gasing",
+        "image": "img/el-gasing.jpg",
+        "rarity": "rare",
+        "classes": ["RAGE", "GOAT"],
+        "stats": {
+          "hp": 150,
+          "atk": 120,
+          "def": 80,
+          "spd": 200
+        }
       }
     ],
     "rarityConfig": {
