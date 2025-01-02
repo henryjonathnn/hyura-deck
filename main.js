@@ -31,8 +31,8 @@ function determineRarity() {
 
 // Function untuk mendapatkan karakter secara random dengan rarity yg spesifik
 function getKarakterRandom(rarity) {
-  const karakterRandom = dataKarakter.karakters.filter(
-    (char) => char.rarity === rarity
+  const karakterRandom = dataKarakter.karakter.filter(
+    (char) => char.rarity.toLowerCase() === rarity.toLowerCase()
   );
   if (karakterRandom.length === 0) {
     console.error(`Tidak ada karakter yang cocok dengan rarity: ${rarity}`);
@@ -49,7 +49,7 @@ function updateSkor(rarity) {
     common: 2,
     rare: 5,
     epic: 10,
-    legend: 20,
+    legendary: 20,
   };
 
   skor += nilaSkor[rarity];
@@ -90,7 +90,8 @@ function updateCardUI(karakter) {
 
   const classKarakter = document.getElementById("classKarakter");
   if (classKarakter) {
-    classKarakter.innerHTML = karakter.class.map(createClassBadge).join("");
+    // Perbaikan untuk menggunakan classes bukan class
+    classKarakter.innerHTML = karakter.classes.map(createClassBadge).join("");
   }
 
   const hpKarakter = document.getElementById("hpKarakter");
@@ -116,8 +117,67 @@ function updateCardUI(karakter) {
   }
 
   if (gameCard && rarityConfig.borderColor) {
-    gameCard.className = gameCard.className.replace(/border-\w+-500/g, '');
-
-    gameCard.classList.add(rarityConfig.borderColor)
+    gameCard.className = gameCard.className.replace(/border-\w+-500/g, "");
+    gameCard.classList.add(rarityConfig.borderColor);
   }
 }
+
+// Function untuk menampilkan loading
+function showLoading() {
+  const loadingAnimation = document.getElementById("loadingAnimation");
+  if (loadingAnimation) {
+    loadingAnimation.style.opacity = "0";
+    loadingAnimation.style.display = "flex";
+
+    requestAnimationFrame(() => {
+      loadingAnimation.style.transition = "opacity 0.5s ease";
+      loadingAnimation.style.opacity = "1";
+    });
+  }
+}
+
+// Function untuk menutup loading
+function hideLoading() {
+  const loadingAnimation = document.getElementById("loadingAnimation");
+  if (loadingAnimation) {
+    loadingAnimation.style.transition = "opacity 0.5s ease";
+    loadingAnimation.style.opacity = "0";
+
+    setTimeout(() => {
+      loadingAnimation.style.display = "none";
+    }, 500);
+  }
+}
+
+async function generateKartuBaru() {
+  if (!dataKarakter) {
+    await loadDataKarakter();
+  }
+
+  showLoading();
+
+  try {
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+    const rarity = determineRarity();
+    const karakter = getKarakterRandom(rarity);
+
+    if (karakter) {
+      updateCardUI(karakter);
+      updateSkor(rarity);
+    }
+  } finally {
+    hideLoading();
+  }
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadDataKarakter();
+
+  const generateBtn = document.getElementById("generateBtn");
+  if (generateBtn) {
+    generateBtn.addEventListener("click", generateKartuBaru);
+  }
+
+  generateKartuBaru();
+});

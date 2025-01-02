@@ -1,0 +1,104 @@
+{
+    "karakter": [
+      {
+        "id": 142,
+        "name": "Rehan Wangsaff",
+        "image": "img/rehan-wangsaff.jpg",
+        "rarity": "rare",
+        "classes": ["CYBER", "MAGE"],
+        "stats": {
+          "hp": 80,
+          "atk": 60,
+          "def": 60,
+          "spd": 60
+        }
+      },
+      {
+        "id": 143,
+        "name": "Fahri Cilok",
+        "image": "img/fahri-cilok.jpg",
+        "rarity": "common",
+        "classes": ["MYSTIC", "HEALER"],
+        "stats": {
+          "hp": 95,
+          "atk": 75,
+          "def": 70,
+          "spd": 85
+        }
+      },
+      {
+        "id": 144,
+        "name": "Zaki Indomie",
+        "image": "img/zaki-indomie.jpg",
+        "rarity": "common",
+        "classes": ["TANK", "WARRIOR"],
+        "stats": {
+          "hp": 70,
+          "atk": 50,
+          "def": 80,
+          "spd": 40
+        }
+      },
+      {
+        "id": 145,
+        "name": "Farhan Kebab",
+        "image": "img/farhan-kebab.jpg",
+        "rarity": "legendary",
+        "classes": ["DRAGON", "SOVEREIGN"],
+        "stats": {
+          "hp": 120,
+          "atk": 100,
+          "def": 90,
+          "spd": 95
+        }
+      },
+      {
+        "id": 146,
+        "name": "Sigit Rendang",
+        "image": "img/sigit-rendang.jpg",
+        "rarity": "legendary",
+        "classes": ["DRAGON", "SOVEREIGN"],
+        "stats": {
+          "hp": 120,
+          "atk": 100,
+          "def": 90,
+          "spd": 95
+        }
+      },
+      {
+        "id": 147,
+        "name": "Kelinci Banyuwangi",
+        "image": "img/kelinci-banyuwangi.jpg",
+        "rarity": "epic",
+        "classes": ["DRAGON", "SOVEREIGN"],
+        "stats": {
+          "hp": 120,
+          "atk": 100,
+          "def": 90,
+          "spd": 95
+        }
+      }
+    ],
+    "rarityConfig": {
+      "common": {
+        "chance": 0.5,
+        "color": "#9ca3af",
+        "statRange": { "min": 40, "max": 80 }
+      },
+      "rare": {
+        "chance": 0.3,
+        "color": "#7C3AED",
+        "statRange": { "min": 60, "max": 90 }
+      },
+      "epic": {
+        "chance": 0.15,
+        "color": "#F59E0B",
+        "statRange": { "min": 75, "max": 100 }
+      },
+      "legendary": {
+        "chance": 0.05,
+        "color": "#EF4444",
+        "statRange": { "min": 90, "max": 120 }
+      }
+    }
+  }

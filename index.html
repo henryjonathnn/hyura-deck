@@ -1,102 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HyuraDeck</title>
 
     <!-- Tailwind CSS -->
-     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-     <!-- Font -->
-     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Nav -->
-     <nav class="fixed top-0 w-full bg-[#0A0B1A]/90 backdrop-blur-lg border-b border-gray-800 z-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="h-8 w-8 bg-gradient-to-r from-purple-600 to-purple-400 rounded-lg"></div>
-                    <span class="ml-2 text-white font-bold text-xl">HyuraDeck</span>
-                </div>
+    <nav
+      class="fixed top-0 w-full bg-[#0A0B1A]/90 backdrop-blur-lg border-b border-gray-800 z-50"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div
+              class="h-8 w-8 bg-gradient-to-r from-purple-600 to-purple-400 rounded-lg"
+            ></div>
+            <span class="ml-2 text-white font-bold text-xl">HyuraDeck</span>
+          </div>
 
-                <div class="flex items-center gap-4 sm:gap-6">
-                    <span class="nav-score text-purple-400">
-                        <span class="font-semibold">Score:</span> <span id="scorePemain"></span>
-                    </span>
-                    <button class="btn-primary px-4 sm:px-6 py-2 rounded-lg text-white font-semibold text-sm sm:text-base">Inventory</button>
-                </div>
+          <div class="flex items-center gap-4 sm:gap-6">
+            <span class="nav-score text-purple-400">
+              <span class="font-semibold">Score:</span>
+              <span id="scorePemain">0</span>
+            </span>
+            <button
+              class="btn-primary px-4 sm:px-6 py-2 rounded-lg text-white font-semibold text-sm sm:text-base"
+            >
+              Inventory
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 grid-bg min-h-screen">
+      <div class="max-w-7xl mx-auto">
+        <!-- Judul -->
+        <div class="text-center mb-8 sm:mb-12">
+          <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2 sm:mb-4">
+            Koleksi Kartu Langkah!
+          </h1>
+          <p class="text-gray-400 text-base sm:text-lg px-4">
+            Generate unique characters with different stats and abilities
+          </p>
+        </div>
+
+        <!-- Card -->
+        <div class="relative game-card rounded-2xl overflow-hidden card-fade">
+          <div class="p-4">
+            <div class="flex justify-between items-center mb-4">
+              <span
+                id="cardId"
+                class="px-3 py-1 rounded-lg bg-purple-900/30 text-purple-400 text-sm font-semibold border border-purple-500/20"
+                >#1</span
+              >
+              <div class="flex items-center">
+                <span class="text-purple-400 text-xs animate-pulse mr-1"
+                  >●</span
+                >
+                <span id="cardRarity" class="text-sm">Rare</span>
+              </div>
             </div>
-        </div>
-     </nav>
 
-     <!-- Main Content -->
-      <main class="pt-20 sm:pt-24 pb-8 sm:pb-12 px-4 grid-bg min-h-screen">
-        <div class="max-w-7xl mx-auto">
+            <div class="relative rounded-xl overflow-hidden mb-4">
+              <img
+                id="gambarKarakter"
+                src="img/fahri-cilok.jpg"
+                alt="Karakter"
+                class="w-full h-[280px] sm:h-[320px] object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#0A0B1A] via-transparent to-transparent"
+              ></div>
+            </div>
 
-            <!-- Judul -->
-             <div class="text-center mb-8 sm:mb-12">
-                <h1 class="text-3xl sm:text-4xl font-bold text-white mb-2 sm:mb-4">Koleksi Kartu Langkah!</h1>
-                <p class="text-gray-400 text-base sm:text-lg px-4">Generate unique characters with different stats and abilities</p>
-             </div>
-
-             <!-- Card -->
-              <div class="relative game-card rounded-2xl overflow-hidden card-fade">
-                <div class="p-4">
-                    <div class="flex justify-between items-center mb-4">
-                        <span id="cardId" class="px-3 py-1 rounded-lg bg-purple-900/30 text-purple-400 text-sm font-semibold border border-purple-500/20">#1</span>
-                        <div class="flex items-center">
-                            <span class="text-purple-400 text-xs animate-pulse mr-1">●</span>
-                            <span id="cardRarity" class="text-sm">Rare</span>
-                        </div>
-                    </div>
-
-                    <div class="relative rounded-xl overflow-hidden mb-4">
-                        <img id="gambarKarakter" src="img/fahri-cilok.jpg" alt="Karakter" class="w-full h-[280px] sm:h-[320px] object-cover" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0B1A] via-transparent to-transparent"></div>
-                    </div>
-
-                    <div class="mb-4">
-                        <h2 id="namaKarakter" class="text-lg sm:text-xl font-bold text-white mb-2">Fahri Cilok</h2>
-                        <div class="flex justify-between items-center">
-                            <div id="classKarakter" class="flex gap-1.5 sm:gap-2">
-                                <!-- Dikelola Di Main JS -->
-                            </div>
-                            <div class="flex items-center bg-purple-900/20 px-2 sm:px-3 py-1 rounded-md">
-                                <span id="hpKarakter" class="text-purple-400 font-bold text-sm">HP: 80</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Statistik -->
-                     <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-4">
-                        <div class="stat-badge p-2 sm:p-3 rounded-lg border border-purple-500/20">
-                            <p class="text-xs text-gray-400 mb-0.5 sm:mb-1">ATK</p>
-                            <p id="statAtk" class="text-base sm:text-lg font-bold text-white">60</p>
-                        </div>
-                        <div class="stat-badge p-2 sm:p-3 rounded-lg border border-purple-500/20">
-                            <p class="text-xs text-gray-400 mb-0.5 sm:mb-1">DEF</p>
-                            <p id="statDef" class="text-base sm:text-lg font-bold text-white">80</p>
-                        </div>
-                        <div class="stat-badge p-2 sm:p-3 rounded-lg border border-purple-500/20">
-                            <p class="text-xs text-gray-400 mb-0.5 sm:mb-1">SPD</p>
-                            <p id="statSpd" class="text-base sm:text-lg font-bold text-white">100</p>
-                        </div>
-                     </div>
+            <div class="mb-4">
+              <h2
+                id="namaKarakter"
+                class="text-lg sm:text-xl font-bold text-white mb-2"
+              >
+                Fahri Cilok
+              </h2>
+              <div class="flex justify-between items-center">
+                <div id="classKarakter" class="flex gap-1.5 sm:gap-2">
+                  <!-- Dikelola Di Main JS -->
+                </div>
+                <div
+                  class="flex items-center bg-purple-900/20 px-2 sm:px-3 py-1 rounded-md"
+                >
+                  <span
+                    id="hpKarakter"
+                    class="text-purple-400 font-bold text-sm"
+                    >HP: 80</span
+                  >
                 </div>
               </div>
+            </div>
 
-              <div class="max-w-sm mx-auto mt-6 sm:mt-8 px-4 sm:px-0">
-                <button id="generateBtn" class="w-full btn-primary py-3 sm:py-4 rounded-xl text-white font-bold text-base sm:text-lg shadow-lg shadow-purple-600/20">
-                    Generate Kartu Baru
-                </button>
+            <!-- Statistik -->
+            <div class="grid grid-cols-3 gap-2 sm:gap-3 mb-4">
+              <div
+                class="stat-badge p-2 sm:p-3 rounded-lg border border-purple-500/20"
+              >
+                <p class="text-xs text-gray-400 mb-0.5 sm:mb-1">ATK</p>
+                <p
+                  id="statAtk"
+                  class="text-base sm:text-lg font-bold text-white"
+                >
+                  60
+                </p>
               </div>
+              <div
+                class="stat-badge p-2 sm:p-3 rounded-lg border border-purple-500/20"
+              >
+                <p class="text-xs text-gray-400 mb-0.5 sm:mb-1">DEF</p>
+                <p
+                  id="statDef"
+                  class="text-base sm:text-lg font-bold text-white"
+                >
+                  80
+                </p>
+              </div>
+              <div
+                class="stat-badge p-2 sm:p-3 rounded-lg border border-purple-500/20"
+              >
+                <p class="text-xs text-gray-400 mb-0.5 sm:mb-1">SPD</p>
+                <p
+                  id="statSpd"
+                  class="text-base sm:text-lg font-bold text-white"
+                >
+                  100
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
+
+        <div class="max-w-sm mx-auto mt-6 sm:mt-8 px-4 sm:px-0">
+          <button
+            id="generateBtn"
+            class="w-full btn-primary py-3 sm:py-4 rounded-xl text-white font-bold text-base sm:text-lg shadow-lg shadow-purple-600/20"
+          >
+            Generate Kartu Baru
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Loading Section -->
+    <div
+      id="loadingAnimation"
+      class="fixed inset-0 bg-black/95 backdrop-blur-xl hidden items-center justify-center z-50"
+    >
+      <div class="metaverse-container">
+        <div class="meta-card">
+          <div class="card-frame">
+            <div class="card-surface">
+              <!-- Glowing lines -->
+              <div class="glow-line horizontal top"></div>
+              <div class="glow-line horizontal bottom"></div>
+              <div class="glow-line vertical left"></div>
+              <div class="glow-line vertical right"></div>
+
+              <!-- Inner content -->
+              <div class="card-content">
+                <div class="energy-core"></div>
+                <div class="floating-particles"></div>
+              </div>
+
+              <!-- Ambient glow -->
+              <div class="ambient-glow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="main.js" async></script>
-</body>
+  </body>
 </html>
