@@ -11,7 +11,9 @@ async function loadDataKarakter() {
     dataKarakter = await response.json();
     return dataKarakter;
   } catch (error) {
+    console.error("Error loading data:", error);
     alert("Error load data karakter, sepertinya ada masalah pada server");
+    throw error;
   }
 }
 
@@ -76,7 +78,9 @@ function updateCardUI(karakter) {
   if (cardRarity) {
     cardRarity.textContent =
       karakter.rarity.charAt(0).toUpperCase() + karakter.rarity.slice(1);
-    cardRarity.className = `text-sm rarity-${karakter.rarity}`;
+
+    cardRarity.className = "text-sm";
+    cardRarity.style.color = rarityConfig.color;
   }
 
   const gambarKarakter = document.getElementById("gambarKarakter");
@@ -90,7 +94,6 @@ function updateCardUI(karakter) {
 
   const classKarakter = document.getElementById("classKarakter");
   if (classKarakter) {
-    // Perbaikan untuk menggunakan classes bukan class
     classKarakter.innerHTML = karakter.classes.map(createClassBadge).join("");
   }
 
@@ -122,6 +125,20 @@ function updateCardUI(karakter) {
   }
 }
 
+// Function untuk menampilkan kartu default
+async function kartuDefault() {
+  if (!dataKarakter) {
+    await loadDataKarakter();
+  }
+
+  const rarity = determineRarity();
+  const karakter = getKarakterRandom(rarity);
+
+  if (karakter) {
+    updateCardUI(karakter);
+  }
+}
+
 // Function untuk menampilkan loading
 function showLoading() {
   const loadingAnimation = document.getElementById("loadingAnimation");
@@ -149,6 +166,7 @@ function hideLoading() {
   }
 }
 
+// Function generate kartu baru
 async function generateKartuBaru() {
   if (!dataKarakter) {
     await loadDataKarakter();
@@ -172,12 +190,16 @@ async function generateKartuBaru() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  await loadDataKarakter();
+  try {
+    await loadDataKarakter();
+    await kartuDefault();
 
-  const generateBtn = document.getElementById("generateBtn");
-  if (generateBtn) {
-    generateBtn.addEventListener("click", generateKartuBaru);
+    const generateBtn = document.getElementById("generateBtn");
+    if (generateBtn) {
+      generateBtn.addEventListener("click", generateKartuBaru);
+    }
+  } catch (error) {
+    console.error("Error saat inisialisasi:", error);
+    alert("Terjadi kesalahan saat memuat aplikasi");
   }
-
-  generateKartuBaru();
 });
