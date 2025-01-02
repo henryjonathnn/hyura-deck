@@ -246,6 +246,162 @@
           "def": 80,
           "spd": 200
         }
+      },
+      {
+        "id": 20,
+        "name": "Yanto Investasi",
+        "image": "img/yanto-investasi.jpg",
+        "rarity": "common",
+        "classes": ["INVEST", "FINANCE"],
+        "stats": {
+          "hp": 90,
+          "atk": 80,
+          "def": 30,
+          "spd": 100
+        }
+      },
+      {
+        "id": 21,
+        "name": "Vincent Satoru",
+        "image": "img/vincent-satoru.jpg",
+        "rarity": "legendary",
+        "classes": ["ANIME", "DUO"],
+        "stats": {
+          "hp": 140,
+          "atk": 100,
+          "def": 110,
+          "spd": 80
+        }
+      },
+      {
+        "id": 22,
+        "name": "Ryan Knalpot",
+        "image": "img/ryan-knalpot.jpg",
+        "rarity": "common",
+        "classes": ["RACING", "DARK"],
+        "stats": {
+          "hp": 70,
+          "atk": 50,
+          "def": 40,
+          "spd": 70
+        }
+      },
+      {
+        "id": 23,
+        "name": "Rusdi Ngawi",
+        "image": "img/rusdi-ngawi.jpg",
+        "rarity": "rare",
+        "classes": ["CUTE", "NGAWI"],
+        "stats": {
+          "hp": 90,
+          "atk": 100,
+          "def": 100,
+          "spd": 100
+        }
+      },
+      {
+        "id": 24,
+        "name": "Rahmat Toyota",
+        "image": "img/rahmat-toyota.jpg",
+        "rarity": "common",
+        "classes": ["CAR", "RACING"],
+        "stats": {
+          "hp": 100,
+          "atk": 150,
+          "def": 100,
+          "spd": 170
+        }
+      },
+      {
+        "id": 25,
+        "name": "Lumba2 Jawa",
+        "image": "img/lumba2-jawa.jpg",
+        "rarity": "epic",
+        "classes": ["COOL", "JAWA"],
+        "stats": {
+          "hp": 100,
+          "atk": 150,
+          "def": 120,
+          "spd": 80
+        }
+      },
+      {
+        "id": 26,
+        "name": "Dimas Beng2",
+        "image": "img/dimas-bengbeng.jpg",
+        "rarity": "common",
+        "classes": ["SWEET", "YUMMY"],
+        "stats": {
+          "hp": 50,
+          "atk": 70,
+          "def": 50,
+          "spd": 30
+        }
+      },
+      {
+        "id": 27,
+        "name": "Denis Iphone",
+        "image": "img/denis-iphone.jpg",
+        "rarity": "epic",
+        "classes": ["LUXURY", "PREMIUM"],
+        "stats": {
+          "hp": 150,
+          "atk": 30,
+          "def": 100,
+          "spd": 70
+        }
+      },
+      {
+        "id": 28,
+        "name": "Budiono Siregar",
+        "image": "img/budiono-siregar.jpg",
+        "rarity": "epic",
+        "classes": ["SHIP", "CAPTAIN"],
+        "stats": {
+          "hp": 80,
+          "atk": 100,
+          "def": 120,
+          "spd": 100
+        }
+      },
+      {
+        "id": 29,
+        "name": "Bagas Dribble",
+        "image": "img/bagas-dribble.jpg",
+        "rarity": "rare",
+        "classes": ["ATHLETE", "NBA"],
+        "stats": {
+          "hp": 150,
+          "atk": 100,
+          "def": 130,
+          "spd": 180
+        }
+      },
+      {
+        "id": 30,
+        "name": "Agung Minecraft",
+        "image": "img/agung-minecraft.jpg",
+        "rarity": "common",
+        "classes": ["BUILDER", "CREATIVE"],
+        "stats": {
+          "hp": 100,
+          "atk": 70,
+          "def": 60,
+          "spd": 100
+        }
+      },
+      {
+        "id": 31,
+        "name": "Bagas Baterplai",
+        "image": "img/bagas-baterplai.jpg",
+        "rarity": "common",
+        "classes": ["ADORABLE", "CUTE"],
+        "stats": {
+          "hp": 150,
+          "atk": 100,
+          "def": 110,
+          "spd": 80
+        }
       }
     ],
     "rarityConfig": {
