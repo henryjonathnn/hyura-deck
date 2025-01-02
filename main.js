@@ -204,6 +204,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const welcomeModal = document.getElementById('welcomeModal');
+  const startButton = document.getElementById('startButton');
+  
+  setTimeout(() => {
+    welcomeModal.style.display = 'flex';
+  }, 1000);
+  
+  startButton.addEventListener('click', () => {
+    welcomeModal.classList.add('hiding');
+    setTimeout(() => {
+      welcomeModal.style.display = 'none';
+      welcomeModal.classList.remove('hiding');
+    }, 500);
+  });
+});
+
 
 
 // MODAL DAFTAR KARTU

@@ -38,12 +38,9 @@ https://hyura-deck.vercel.app/
    - Klik tombol "Generate Kartu" untuk membuat kartu baru dengan karakteristik unik.
 
 2. **Kelola Koleksi**:
-   - Lihat koleksi kartu yang telah dibuat.
+   - Lihat koleksi kartu yang telah ada.
 
 
 ## Lisensi
 
 © 2025 HyuraDev. All rights reserved.
-
-
----
