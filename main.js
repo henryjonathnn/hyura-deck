@@ -105,4 +105,19 @@ function updateCardUI(karakter) {
   for (const [stat, elemen] of Object.entries(elemenStat)) {
     if (elemen) elemen.textContent = karakter.stats[stat];
   }
+
+  const gameCard = document.querySelector(".game-card");
+  if (gameCard) {
+    gameCard.classList.add("opacity-0");
+    setTimeout(() => {
+      gameCard.classList.remove("opacity-0");
+      gameCard.classList.add("opacity-100");
+    }, 50);
+  }
+
+  if (gameCard && rarityConfig.borderColor) {
+    gameCard.className = gameCard.className.replace(/border-\w+-500/g, '');
+
+    gameCard.classList.add(rarityConfig.borderColor)
+  }
 }
