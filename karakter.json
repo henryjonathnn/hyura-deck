@@ -1,98 +1,254 @@
 {
     "karakter": [
       {
-        "id": 142,
+        "id": 1,
         "name": "Rehan Wangsaff",
         "image": "img/rehan-wangsaff.jpg",
         "rarity": "rare",
-        "classes": ["CYBER", "MAGE"],
+        "classes": ["HULK", "STRONG"],
         "stats": {
-          "hp": 80,
-          "atk": 60,
-          "def": 60,
-          "spd": 60
+          "hp": 150,
+          "atk": 80,
+          "def": 80,
+          "spd": 20
         }
       },
       {
-        "id": 143,
+        "id": 2,
         "name": "Fahri Cilok",
         "image": "img/fahri-cilok.jpg",
         "rarity": "common",
-        "classes": ["MYSTIC", "HEALER"],
-        "stats": {
-          "hp": 95,
-          "atk": 75,
-          "def": 70,
-          "spd": 85
-        }
-      },
-      {
-        "id": 144,
-        "name": "Zaki Indomie",
-        "image": "img/zaki-indomie.jpg",
-        "rarity": "common",
-        "classes": ["TANK", "WARRIOR"],
+        "classes": ["SMART", "NERD"],
         "stats": {
           "hp": 70,
           "atk": 50,
-          "def": 80,
-          "spd": 40
+          "def": 50,
+          "spd": 90
         }
       },
       {
-        "id": 145,
+        "id": 3,
+        "name": "Zaki Indomie",
+        "image": "img/zaki-indomie.jpg",
+        "rarity": "common",
+        "classes": ["STRONG", "WARRIOR"],
+        "stats": {
+          "hp": 120,
+          "atk": 50,
+          "def": 90,
+          "spd": 90
+        }
+      },
+      {
+        "id": 4,
         "name": "Farhan Kebab",
         "image": "img/farhan-kebab.jpg",
         "rarity": "legendary",
-        "classes": ["DRAGON", "SOVEREIGN"],
+        "classes": ["TERRIBLE", "REPTILE"],
         "stats": {
-          "hp": 120,
+          "hp": 200,
           "atk": 100,
-          "def": 90,
-          "spd": 95
+          "def": 80,
+          "spd": 150
         }
       },
       {
-        "id": 146,
+        "id": 5,
         "name": "Sigit Rendang",
         "image": "img/sigit-rendang.jpg",
         "rarity": "legendary",
-        "classes": ["DRAGON", "SOVEREIGN"],
+        "classes": ["SCORPION", "TERRIBLE"],
         "stats": {
-          "hp": 120,
-          "atk": 100,
-          "def": 90,
-          "spd": 95
+          "hp": 180,
+          "atk": 150,
+          "def": 60,
+          "spd": 180
         }
       },
       {
-        "id": 147,
+        "id": 6,
         "name": "Kelinci Banyuwangi",
         "image": "img/kelinci-banyuwangi.jpg",
         "rarity": "epic",
-        "classes": ["DRAGON", "SOVEREIGN"],
+        "classes": ["CUTE", "ADORABLE"],
+        "stats": {
+          "hp": 100,
+          "atk": 50,
+          "def": 50,
+          "spd": 80
+        }
+      },
+      {
+        "id": 7,
+        "name": "Venom Majalengka",
+        "image": "img/venom-majalengka.jpg",
+        "rarity": "epic",
+        "classes": ["CUTE", "COOL"],
+        "stats": {
+          "hp": 150,
+          "atk": 70,
+          "def": 90,
+          "spd": 90
+        }
+      },
+      {
+        "id": 8,
+        "name": "Supri Gergaji",
+        "image": "img/supri-gergaji.jpg",
+        "rarity": "epic",
+        "classes": ["TERRIBLE", "CHAINSAW"],
+        "stats": {
+          "hp": 100,
+          "atk": 150,
+          "def": 80,
+          "spd": 70
+        }
+      },
+      {
+        "id": 9,
+        "name": "Rizal Ekonomi",
+        "image": "img/rizal-ekonomi.jpg",
+        "rarity": "rare",
+        "classes": ["TRADING", "FINANCE"],
+        "stats": {
+          "hp": 100,
+          "atk": 90,
+          "def": 40,
+          "spd": 70
+        }
+      },
+      {
+        "id": 10,
+        "name": "Rian Batagor",
+        "image": "img/rian-batagor.jpg",
+        "rarity": "common",
+        "classes": ["TASTY", "CHEF"],
+        "stats": {
+          "hp": 90,
+          "atk": 70,
+          "def": 80,
+          "spd": 50
+        }
+      },
+      {
+        "id": 11,
+        "name": "Reza Kecap",
+        "image": "img/reza-kecap.jpg",
+        "rarity": "common",
+        "classes": ["SWEET", "DARK"],
+        "stats": {
+          "hp": 140,
+          "atk": 100,
+          "def": 70,
+          "spd": 120
+        }
+      },
+      {
+        "id": 12,
+        "name": "Ryan Albino",
+        "image": "img/ryan-albino.jpg",
+        "rarity": "rare",
+        "classes": ["HANDSOME", "WHITE"],
+        "stats": {
+          "hp": 80,
+          "atk": 120,
+          "def": 50,
+          "spd": 90
+        }
+      },
+      {
+        "id": 13,
+        "name": "Kevin Lontong",
+        "image": "img/kevin-lontong.jpg",
+        "rarity": "legendary",
+        "classes": ["LONG", "CARBO"],
         "stats": {
           "hp": 120,
-          "atk": 100,
-          "def": 90,
-          "spd": 95
+          "atk": 50,
+          "def": 100,
+          "spd": 110
+        }
+      },
+      {
+        "id": 14,
+        "name": "Luwak Hitam",
+        "image": "img/luwak-hitam.jpg",
+        "rarity": "common",
+        "classes": ["COFFEE", "PREMIUM"],
+        "stats": {
+          "hp": 130,
+          "atk": 70,
+          "def": 70,
+          "spd": 50
+        }
+      },
+      {
+        "id": 15,
+        "name": "Ilham Ciken",
+        "image": "img/ilham-ciken.jpg",
+        "rarity": "common",
+        "classes": ["YUMMY", "TASTY"],
+        "stats": {
+          "hp": 70,
+          "atk": 50,
+          "def": 50,
+          "spd": 80
+        }
+      },
+      {
+        "id": 16,
+        "name": "Bayu Kokonut",
+        "image": "img/bayu-kokonut.jpg",
+        "rarity": "rare",
+        "classes": ["FRUIT", "BALD"],
+        "stats": {
+          "hp": 110,
+          "atk": 80,
+          "def": 100,
+          "spd": 30
+        }
+      },
+      {
+        "id": 17,
+        "name": "Dimas Hotwil",
+        "image": "img/dimas-hotwil.jpg",
+        "rarity": "epic",
+        "classes": ["RACING", "MBER"],
+        "stats": {
+          "hp": 100,
+          "atk": 150,
+          "def": 120,
+          "spd": 120
+        }
+      },
+      {
+        "id": 18,
+        "name": "Ambatron",
+        "image": "img/ambatron.jpg",
+        "rarity": "legendary",
+        "classes": ["IRONMAN", "TERMINATOR"],
+        "stats": {
+          "hp": 200,
+          "atk": 150,
+          "def": 180,
+          "spd": 130
         }
       }
     ],
     "rarityConfig": {
       "common": {
         "chance": 0.5,
-        "color": "#9ca3af",
+        "color": "#6B7280",
         "statRange": { "min": 40, "max": 80 }
       },
       "rare": {
         "chance": 0.3,
-        "color": "#7C3AED",
+        "color": "#F59E0B",
         "statRange": { "min": 60, "max": 90 }
       },
       "epic": {
         "chance": 0.15,
-        "color": "#F59E0B",
+        "color": "#8B5CF6",
         "statRange": { "min": 75, "max": 100 }
       },
       "legendary": {
